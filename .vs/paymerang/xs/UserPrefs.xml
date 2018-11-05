@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{AADE22A7-28E9-4C5F-8E75-03767536DB75}|Default">
+  <MonoDevelop.Ide.ItemProperties.paymerang PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="paymerang/ReadMe.md">
+    <Files>
+      <File FileName="paymerang/ReadMe.md" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Payee Table Information";
+}
+<div ng-controller="myCtrl">
+
+    <div class="btn-group col-md-2">
+        <button type="button" class="btn purple dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Payee Details
+        </button>
+        <div class="dropdown-menu">
+            <button class="dropdown-item" ng-click="bleendot()">Bleendot</button>
+            <button class="dropdown-item" ng-click="farmage()">Farmage</button>
+            <button class="dropdown-item" ng-click="digirang()">Digirang</button>
+            <button class="dropdown-item" ng-click="earthmark()">Earthmark</button>
+            <button class="dropdown-item" ng-click="datagen()">Datagen</button>
+            <button class="dropdown-item" ng-click="twiggery()">Twiggery</button>
+            <button class="dropdown-item" ng-click="zolar()">Zolar</button>
+            <button class="dropdown-item" ng-click="illumity()">Illumity</button>
+            <button class="dropdown-item" ng-click="mazuda()">Mazuda</button>
+            <button class="dropdown-item" ng-click="zensure()">Zensure</button>
+            <button class="dropdown-item" ng-click="buzzmaker()">Buzzmaker</button>
+            <button class="dropdown-item" ng-click="kangle()">Kangle</button>
+            <button class="dropdown-item" ng-click="miraclis()">Miraclis</button>
+            <button class="dropdown-item" ng-click="sportan()">Sportan</button>
+            <button class="dropdown-item" ng-click="manufact()">Manufact</button>
+        </div>
+    </div>
+    
+    <h5 class="col-md-10 pull-right">Payee Information</h5>
+    <table class="col-md-10 pull-right" border="1">
+        <tr>
+            <th>Name</th>
+            <th>Fax</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Attention</th>
+            <th>Submission</th>
+        </tr>
+        <tr>
+            <td ng-bind="info.Payee.Name"></td>
+            <td ng-bind="info.Payee.Fax"></td>
+            <td ng-bind="info.Payee.Phone"></td>
+            <td>{{info.Payee.Address.Address1}} {{info.Payee.Address.City}}, {{info.Payee.Address.StateOrProvince}} {{info.Payee.Address.PostalCode}}</td>
+            <td ng-bind="info.Payee.Attention"></td>
+            <td ng-bind="info.Payee.SubmissionDate"></td>
+        </tr>
+    </table>
+    
+    <h5 class="col-md-10 pull-right">Payment Information</h5>
+    <table class="col-md-10 pull-right" border="1">
+        <tr>
+            <th>PAN</th>
+            <th>CVV</th>
+            <th>Expiration Date</th>
+        </tr>
+        <tr>
+            <td ng-bind="info.Payment.PAN"></td>
+            <td ng-bind="info.Payment.CVV"></td>
+            <td ng-bind="info.Payment.Exp"></td>
+        </tr>
+    </table>
+    
+    <h5 class="col-md-10 pull-right">Remittance Information</h5>
+    <table class="col-md-10 pull-right" border="1">
+        <tr>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Invoice Number</th>
+            <th>Payor Id</th>
+            <th>Payor Name</th>
+        </tr>
+        <tr ng-repeat="friend in info.Remittance track by $index">
+            <td ng-bind="info.Remittance[$index].Amount"></td>
+            <td ng-bind="info.Remittance[$index].Description"></td>
+            <td ng-bind="info.Remittance[$index].InvoiceNo"></td>
+            <td ng-bind="info.Remittance[$index].PayorId"></td>
+            <td ng-bind="info.Remittance[$index].PayorName"></td>
+        </tr>
+    </table>
+    
+</div>
+
